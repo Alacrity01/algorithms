@@ -159,37 +159,6 @@ function test_n_prime_numbers(){
 
 
 // # 2. Given an array of randomly sorted numbers, write a method that sorts them in descending order (without using any sort function built into the language.)
-// function sort_descending(arr){
-//   let max = arr[0];
-//   let descending_arr = [arr[0]];
-//   n = arr.length
-//   let j = 0;
-//   while(j < n - 1){
-//     console.log(arr);
-//     console.log(descending_arr);
-//     for(i = 0; i <= arr.length; i++){
-//       if(arr[i] >= max){
-//         max = arr[i];
-//       }
-//     }
-//     descending_arr[j] = max;
-
-//     let index_of_max_found = false;
-//     let index_of_max = 0;
-//     while(index_of_max_found == false){
-//       if(arr[index_of_max] == max){
-//         arr.splice(index_of_max);
-//         index_of_max_found = true;
-//       }
-//       index_of_max++;
-//     }
-//     max = null;
-//     j++;
-//   }
-//   console.log(descending_arr.length)
-//   return descending_arr;
-// }
-
 function sort_descending(arr){
   let temp = null;
   let i = 0;
