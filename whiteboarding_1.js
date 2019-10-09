@@ -87,7 +87,7 @@ function sum_the_array(arr){
   }
   return sum;
 }
-array = [1, 5, 7, 9, 2, 0]
+array = [1, 5, 7, 9, 2, 0];
 // console.log(sum_the_array(array));
 
 // # Medium:
@@ -112,8 +112,8 @@ function palindrome(str){
 // # Advanced:
 // # 1. Write a method to generate/print/store the first "n" prime numbers.
 function n_prime_numbers(n){
-  let primes = [2]
-  let number_to_test = 2
+  let primes = [2];
+  let number_to_test = 2;
   let is_prime = true;
   while(n > primes.length){
     number_to_test++;
@@ -131,8 +131,8 @@ function n_prime_numbers(n){
 }
 
 function test_n_prime_numbers(){
-  let first_10_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
-  let test_case = n_prime_numbers(10)
+  let first_10_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
+  let test_case = n_prime_numbers(10);
   console.log(n_prime_numbers(10));
   // console.log(first_10_primes);
 
@@ -155,11 +155,57 @@ function test_n_prime_numbers(){
     return"There is an error in the method";
   }
 }
-
-console.log(test_n_prime_numbers());
+// console.log(test_n_prime_numbers());
 
 
 // # 2. Given an array of randomly sorted numbers, write a method that sorts them in descending order (without using any sort function built into the language.)
+// function sort_descending(arr){
+//   let max = arr[0];
+//   let descending_arr = [arr[0]];
+//   n = arr.length
+//   let j = 0;
+//   while(j < n - 1){
+//     console.log(arr);
+//     console.log(descending_arr);
+//     for(i = 0; i <= arr.length; i++){
+//       if(arr[i] >= max){
+//         max = arr[i];
+//       }
+//     }
+//     descending_arr[j] = max;
+
+//     let index_of_max_found = false;
+//     let index_of_max = 0;
+//     while(index_of_max_found == false){
+//       if(arr[index_of_max] == max){
+//         arr.splice(index_of_max);
+//         index_of_max_found = true;
+//       }
+//       index_of_max++;
+//     }
+//     max = null;
+//     j++;
+//   }
+//   console.log(descending_arr.length)
+//   return descending_arr;
+// }
+
+function sort_descending(arr){
+  let temp = null;
+  let i = 0;
+  while(i != arr.length){   
+    if(arr[i] < arr[i + 1]){
+      temp = arr[i];
+      arr[i] = arr[i + 1];
+      arr[i + 1] = temp;
+      i = -1;
+    }
+    i += 1;
+  }
+  return arr;
+}
+console.log(sort_descending([-99,1,1,2,3,4,5,5,6,7,8,9,10]));
+
 
 // # 3. Given a tic-tac-toe board (matrix of 3 x 3), write a method that can check to see whether X or O won.
 
