@@ -16,7 +16,7 @@ sum = 0
 numbers.each do |number|
    sum += number
 end
-p sum
+# p sum
 
 # ```
 #    1. Write a method called `double_numbers` that takes in an array and returns a new array with each number doubled. Use an `each` loop in the method.
@@ -31,7 +31,7 @@ def double_numbers(arr)
    end 
    new_arr
 end
-p double_numbers([4, 1, 3])  #=> [8, 2, 6]
+# p double_numbers([4, 1, 3])  #=> [8, 2, 6]
 
 
 #       1. Read about the Ruby `while` loop. Then refactor the code below using `while`. *Warning* - a `while` loop will run forever if you write it incorrectly (unlike a `times` loop or an `each` loop). You can enter Ctrl C in your terminal to force Ruby to quit if it’s stuck in an infinite loop.
@@ -53,7 +53,7 @@ while numbers[index] do
    sum += numbers[index]
    index += 1
 end
-p sum
+# p sum
 
 #          1. The following code will run 100 times, and each time it will ask the user for their name. The code will break early if the user’s name is Bob.
 # ```
@@ -74,7 +74,7 @@ def bob()
       puts "What is your name?"
       name = gets.chomp
    end
-   puts "Hi, #{name}!" # puts "Hi, Bob!"
+   # puts "Hi, #{name}!" # puts "Hi, Bob!"
 end
 # bob()
 
@@ -93,7 +93,7 @@ def average(arr, sum=0)
    end
    sum.to_f / arr.length
 end
-p average([2, 1, 7, 5])  #=> 3.75
+# p average([2, 1, 7, 5])  #=> 3.75
 
 def average(arr, sum=0)
    arr.each do |number|
@@ -101,7 +101,7 @@ def average(arr, sum=0)
    end
    sum.to_f / arr.length
 end
-p average([2, 1, 7, 5])  #=> 3.75
+# p average([2, 1, 7, 5])  #=> 3.75
 
 # Week 2
 #                1. Read about the Ruby `map` method. Then refactor the code below using `map`.
@@ -115,7 +115,7 @@ p average([2, 1, 7, 5])  #=> 3.75
 # ```
 numbers = [1, 2, 4, 2]
 doubled_numbers = numbers.map { |number| number * 2 }
-p doubled_numbers
+# p doubled_numbers
 
 #                   1. Use the `map` method to convert the array of hashes
 # ```
@@ -134,7 +134,7 @@ items = [
          {id: 2, body: 'bar'},
          {id: 3, body: 'foobar'}
         ]
-p items.map { |item| item[:id] }
+# p items.map { |item| item[:id] }
 #                   2. Use the `map` method with the `to_h` method to convert the array of hashes
 # ```
 # fruits = [
@@ -152,7 +152,7 @@ fruits = [
  {"name" => "banana", "color" => "yellow"},
  {"name" => "grape", "color" => "purple"}
 ]
-p fruits.map { |fruit| [fruit["name"], fruit["color"]] }.to_h
+# p fruits.map { |fruit| [fruit["name"], fruit["color"]] }.to_h
 
 #                      1. Write a method called `reverse_a_string` that accepts a string as a parameter and returns the reverse. The one caveat: Don't use the reverse method that already comes with Ruby!
 # ```
@@ -165,7 +165,7 @@ def reverse_a_string(str)
    end
    new_str
 end
-p reverse_a_string("abcde")  #=> "edcba"
+# p reverse_a_string("abcde")  #=> "edcba"
 # ```
 
 #                         1. Write a method called `find_longest_word`, which will accept a string as a parameter (usually a sentence), and return another string that will be the longest word in that sentence.
@@ -180,7 +180,7 @@ def find_longest_word(str)
    end
    longest_part
 end
-p find_longest_word("What is the longest word in this phrase?")  #=> "longest"
+# p find_longest_word("What is the longest word in this phrase?")  #=> "longest"
 # ```
 # ________________
 # Week 3
@@ -196,7 +196,7 @@ p find_longest_word("What is the longest word in this phrase?")  #=> "longest"
 # p even_numbers
 # ```
 numbers = [1, 2, 4, 2]
-p numbers.select(&:even?) # or p [1, 2, 4, 2].select(&:even?)
+# p numbers.select(&:even?) # or p [1, 2, 4, 2].select(&:even?)
 
 #                               1. Use the `select` method with the following array of hashes
 # ```
@@ -215,7 +215,7 @@ movies = [
           {id: 4, title: "Fracture", rating: 2.0}
          ]
 
-p flops = movies.select{ |movie| movie[:rating].to_f < 4.0 }.map { |movie| movie }
+# p flops = movies.select{ |movie| movie[:rating].to_f < 4.0 }.map { |movie| movie }
 
 
 #                                  1. Use the `select` method combined with the `map` method to convert the array of hashes
@@ -237,7 +237,7 @@ movies = [
           {id: 3, title: "The Chamber", rating: 3.0},
           {id: 4, title: "Fracture", rating: 2.0}
          ]
-p movies_with_letter_b = movies.select{ |movie| movie[:title].downcase.include?("b") }.map{ |movie| movie[:id] } 
+# p movies_with_letter_b = movies.select{ |movie| movie[:title].downcase.include?("b") }.map{ |movie| movie[:id] } 
 
 #                                     1. Write a method called `palindrome?` which should accept a string as a parameter and return a boolean that indicates whether the string is a palindrome. A palindrome is a word that reads the same both forwards and backwards. Examples: eye, madam, racecar
 # ```
@@ -255,8 +255,8 @@ def palindrome?(str)
       return false
    end
 end
-p palindrome?("racecar")   #=> true
-p palindrome?("wazzzzup")  #=> false
+# p palindrome?("racecar")   #=> true
+# p palindrome?("wazzzzup")  #=> false
 # ```
 
 #                                        1. Write a method called `split_array`, with two parameters, the first being an array, and the second being an integer. The method will then create an array of other arrays, each one being the size of the indicated by the second parameter. 
@@ -270,8 +270,8 @@ def split_array(arr, int)
    end
    new_arr
 end
-p split_array([0, 1, 2, 3, 4, 5], 2)  #=> [[0, 1], [2, 3], [4, 5]]
-p split_array([0, 1, 2, 3, 4, 5], 3)  #=> [[0, 1, 2], [3, 4, 5]]
+# p split_array([0, 1, 2, 3, 4, 5], 2)  #=> [[0, 1], [2, 3], [4, 5]]
+# p split_array([0, 1, 2, 3, 4, 5], 3)  #=> [[0, 1, 2], [3, 4, 5]]
 # ```
 # ________________
 # Week 4
@@ -285,7 +285,7 @@ p split_array([0, 1, 2, 3, 4, 5], 3)  #=> [[0, 1, 2], [3, 4, 5]]
 # p sum #=> 9
 # ```
 numbers = [1, 2, 4, 2]
-p numbers.reduce(:+)
+# p numbers.reduce(:+)
 
 #                                              1. Write a method called `scrabble_score` which should accept a string as a parameter and return the amount of points it is worth in Scrabble. You can use the following hash to determine how many points each letter is worth:
 # ```
@@ -297,8 +297,8 @@ def scrabble_score(str)
    points = {'a'=> 1, 'b'=> 3, 'c'=> 3, 'd'=> 2, 'e'=> 1, 'f'=> 4, 'g'=> 2, 'h'=> 4, 'i'=> 1, 'j'=> 8, 'k'=> 5, 'l'=> 1, 'm'=> 3, 'n'=> 1, 'o'=> 1, 'p'=> 3, 'q'=> 10, 'r'=> 1, 's'=> 1, 't'=> 1, 'u'=> 1, 'v'=> 4, 'w'=> 4, 'x'=> 8, 'y'=> 4, 'z'=> 10}
    str.split('').reduce(0) { |score, current_letter| score + points[current_letter] }
 end
-p scrabble_score("scholar")  #=> 12
-p scrabble_score("scholars")  #=> 13
+# p scrabble_score("scholar")  #=> 12
+# p scrabble_score("scholars")  #=> 13
 
 # ```
 
@@ -314,7 +314,7 @@ items = [
 # ```
 # and calculate the total amount of words for all items of type `:book`. The result should be
 # ```
-p books = items.select{ |item| item[:type] == :book }.map{ |item| item[:words] }.reduce(0){ |total,current| total + current } # 3906
+# p books = items.select{ |item| item[:type] == :book }.map{ |item| item[:words] }.reduce(0){ |total,current| total + current } # 3906
 # ```
 
 
@@ -346,8 +346,8 @@ def mutation?(str1,str2) # Note: solution will not currently account for repeat 
 
    true
 end
-p mutation?("burly", "ruby")    #=> true
-p mutation?("burly", "python")  #=> false
+# p mutation?("burly", "ruby")    #=> true
+# p mutation?("burly", "python")  #=> false
 # ```
 
 
@@ -367,8 +367,8 @@ def sum_of_range(arr)
    sum
 end
 
-p sum_of_range([1, 4])  #=> 10
-p sum_of_range([4, 1])  #=> 10
+# p sum_of_range([1, 4])  #=> 10
+# p sum_of_range([4, 1])  #=> 10
 # ```
 # ________________
 # Week 5
@@ -379,7 +379,7 @@ people = [
  {"name" => "Majora", "age" => 28},
  {"name" => "Danilo", "age" => 45}
 ]
-puts people.sort_by {|k| k["age"] }
+# puts people.sort_by {|k| k["age"] }
 # ```
 
 
@@ -421,24 +421,60 @@ people = [
 # ```
 # ["Bad Boys", "Die Hard", "The Chamber", "Fracture"]
 # ```
-p movies = movies.sort_by{|k| k[:rating] }.map{|movie| movie[:title]}.reverse
+# p movies = movies.sort_by{|k| k[:rating] }.map{|movie| movie[:title]}.reverse
 
 #                                                             1. Find the needle by writing one line of code. As an example, if `haystack = [:hay, :needle, :hay]`, you'd pull it out with: `haystack[1]`
 # ```
 haystack = {hay: [:hay, :hay, :hay, {hay: {hay: [:hay, {hay: [:hay, :hay, :needle]}, :hay, :hay, :hay]}}, :hay, :hay]}
-p haystack[:hay][3][:hay][:hay][1][:hay][2]
+# p haystack[:hay][3][:hay][:hay][1][:hay][2]
 # ```
 
 
 #                                                                1. Return the missing letter from a given range of letters passed into the method as a string. If there is no missing letter, the method should return nil. bonus: returns a string of all missing letters as a string. ex: find_missing_letter("ace") would return "bd", write your own test.
 # ```
 def find_missing_letter(str)
-   first = str[0]
-   last = str[-1]
+   str = str.downcase
+   str_array = []
+   missing_letters_arr = []
+   missing_letters_str = ""
 
+   str.each_byte do |char|
+      str_array << char
+   end
+
+   str_array = str_array.sort
+
+   i = 0
+   while i < str_array.length - 1 do
+      j = 1
+      if str_array[i] + 1 == str_array[i + 1]
+         i += 1
+      else
+         while str_array[i] + j != str_array[i + 1] do
+            missing_letters_arr << (str_array[i] + j)
+            j += 1
+         end
+         i += 1
+      end
+   end
+
+   missing_letters_arr.each do |element|
+      missing_letters_str += element.chr
+   end
+
+   if missing_letters_str == ""
+      return nil
+   else
+      return missing_letters_str
+   end
 end
-# p find_missing_letter("opqrsuv")  #=> "t"
-# p find_missing_letter("xyz")      #=> nil
+p find_missing_letter("ace")  #=> "bd"
+p find_missing_letter("xyz")      #=> nil
+p find_missing_letter("abdegi") #=> "cfh"
+p find_missing_letter("ad") #=> "bc"
+p find_missing_letter("az") #=> all letters b through y
+p find_missing_letter("acz") #=> all letters b through y excluding c
+p find_missing_letter("zca") #=> all letters b through y excluding c
 # ```
 
 

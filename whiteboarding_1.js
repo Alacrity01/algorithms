@@ -173,7 +173,7 @@ function sort_descending(arr){
   }
   return arr;
 }
-console.log(sort_descending([-99,1,1,2,3,4,5,5,6,7,8,9,10]));
+// console.log(sort_descending([-99,1,1,2,3,4,5,5,6,7,8,9,10]));
 
 
 // # 3. Given a tic-tac-toe board (matrix of 3 x 3), write a method that can check to see whether X or O won.
