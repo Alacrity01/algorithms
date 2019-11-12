@@ -430,9 +430,9 @@ haystack = {hay: [:hay, :hay, :hay, {hay: {hay: [:hay, {hay: [:hay, :hay, :needl
 # ```
 
 
-#                                                                1. Return the missing letter from a given range of letters passed into the method as a string. If there is no missing letter, the method should return nil. bonus: returns a string of all missing letters as a string. ex: find_missing_letter("ace") would return "bd", write your own test.
+#                                                                1. Return the missing letter from a given range of letters passed into the method as a string. If there is no missing letter, the method should return nil. bonus: returns a string of all missing letters as a string. ex: find_missing_letters("ace") would return "bd", write your own test.
 # ```
-def find_missing_letter(str)
+def find_missing_letters(str)
    str = str.downcase
    str_array = []
    missing_letters_arr = []
@@ -468,13 +468,13 @@ def find_missing_letter(str)
       return missing_letters_str
    end
 end
-p find_missing_letter("ace")  #=> "bd"
-p find_missing_letter("xyz")      #=> nil
-p find_missing_letter("abdegi") #=> "cfh"
-p find_missing_letter("ad") #=> "bc"
-p find_missing_letter("az") #=> all letters b through y
-p find_missing_letter("acz") #=> all letters b through y excluding c
-p find_missing_letter("zca") #=> all letters b through y excluding c
+# p find_missing_letters("ace")  #=> "bd"
+# p find_missing_letters("xyz")      #=> nil
+# p find_missing_letters("abdegi") #=> "cfh"
+# p find_missing_letters("ad") #=> "bc"
+# p find_missing_letters("az") #=> all letters b through y
+# p find_missing_letters("acz") #=> all letters b through y excluding c
+# p find_missing_letters("zca") #=> all letters b through y excluding c
 # ```
 
 
