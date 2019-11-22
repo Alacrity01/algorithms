@@ -1,6 +1,6 @@
 # Given a string as input, output it without spaces
 
-def remove_spaces(str)
+def remove_spaces_a(str)
   i = 0
   str.length.times do
     if str[i] == " "
@@ -11,4 +11,10 @@ def remove_spaces(str)
   str
 end
 
-p remove_spaces(" a n apple a day keeps the doctor awa y  ")
+p remove_spaces_a(" a n apple a day keeps the doctor awa y  ")
+
+def remove_spaces_b(str)
+  str.delete!(" ")
+end
+
+p remove_spaces_b(" a n apple a day keeps the doctor awa y  ")
