@@ -1,4 +1,4 @@
-# Whiteboarding Questions 1
+#*************************** Whiteboarding Questions 1 ***************************
 # # Easy:
 # 1. Write a method that returns an array of every number from 1 to 100. 
 def a100():
@@ -8,8 +8,12 @@ def a100():
 # 2. Write a method that returns an array of every other number from 1 to 100. (That is, 1, 3, 5, 7 … 99).
 def odds100():
 	return list(range(1,100,2))
-print(odds100())
+# print(odds100())
+
 # 3. Write a method that returns an array of all numbers from 1 to 1000 that are divisible by 3.
+def mults_of_3():
+	return list(a for a in range(1,1001) if a % 3 == 0)
+# print(mults_of_3())
 
 # 4. Write a method that accepts one argument - an array of numbers - and returns an array of all numbers from that original array that are greater than 7. For example, if the input is [5, 8, 1, 7, 9, 10], the function should return [8, 9, 10].
 
@@ -29,8 +33,10 @@ print(odds100())
 
 # 3. Given a tic-tac-toe board (matrix of 3 x 3), write a method that can check to see whether X or O won.
 
-# Whiteboarding #2 Questions
 
+
+
+#*************************** Whiteboarding Questions 2 ***************************
 # 1.	Be sure to follow the process outlined in the Whiteboarding cheat sheet!
 # 2.	After you’ve written your code, identify how many steps your algorithm takes relative to N.
 
@@ -50,8 +56,7 @@ print(odds100())
 
 # (If you're done early, here are some more array questions, some are fairly difficult: http://javarevisited.blogspot.com/2015/06/top-20-array-interview-questions-and-answers.html)
 
-# Whiteboarding #3 Questions
-
+# *************************** Whiteboarding Questions 3 ***************************
 # A.	Be sure to follow the process outlined in the Whiteboarding cheat sheet!
 # B.	Everyone should pair up to take turns whiteboarding the following problems and identifying the efficiency of each algorithm in terms of Big O Notation.
 
@@ -77,8 +82,7 @@ print(odds100())
 # * Quick sort
 # * Heap sort 
 
-# Whiteboarding Questions 4
-
+# *************************** Whiteboarding Questions 4 ***************************
 # Everyone should pair up to take turns whiteboarding the following problems and identifying the efficiency of each algorithm in terms of Big O Notation. (Take turns on doing each one.)
 
 # 1. Write a function that accepts an array as a parameter and returns true or false depending on whether there are any duplicate values. Use the *nested loops approach* as described in the slides.
