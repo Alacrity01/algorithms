@@ -16,6 +16,10 @@ def mults_of_3():
 # print(mults_of_3())
 
 # 4. Write a method that accepts one argument - an array of numbers - and returns an array of all numbers from that original array that are greater than 7. For example, if the input is [5, 8, 1, 7, 9, 10], the function should return [8, 9, 10].
+def greater_7(nums):
+	return list(a for a in nums if a > 7)
+# test_arr = [5, 8, 1, 7, 9, 10]
+# print(greater_7(test_arr))
 
 # 5. Write a method that accepts an array of numbers as a parameter, and returns the number of how many 55’s there are in the array. For example, if the input is [55, 4, 7, 55, 9, 1, 55, 2, 3, 55, 0], the output should be 4. NOTE: DO NOT USE RUBY’s built-in “count” method.
 
