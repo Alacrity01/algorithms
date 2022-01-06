@@ -37,16 +37,25 @@ def sum_of_arr(nums):
 # print(sum_of_arr(test_arr))
 
 # Medium:
-# 1. Write a method that accepts an array and returns it as a hash. For example, [“a”, “b”, “c] should turn into {0 => “a”, 1 => “b”, 2 => “c”}
+# M1. Write a method that accepts an array and returns it as a hash. For example, [“a”, “b”, “c] should turn into {0 => “a”, 1 => “b”, 2 => “c”}
+def arr_to_dict(arr):
+	new_dict = {}
+	i = 0
+	for a in arr:
+		new_dict[i] = a
+		i += 1
+	return new_dict
+# test_arr = ["a", "b", "c"]	
+# print(arr_to_dict(test_arr))
 
-# 2. Write a method that accepts a string and returns whether it’s a palindrome. (without using the reverse method)
+# M2. Write a method that accepts a string and returns whether it’s a palindrome. (without using the reverse method)
 
 # Advanced:
-# 1. Write a method to generate/print/store the first "n" prime numbers.
+# A1. Write a method to generate/print/store the first "n" prime numbers.
 
-# 2. Given an array of randomly sorted numbers, write a method that sorts them in descending order (without using any sort function built into the language.)
+# A2. Given an array of randomly sorted numbers, write a method that sorts them in descending order (without using any sort function built into the language.)
 
-# 3. Given a tic-tac-toe board (matrix of 3 x 3), write a method that can check to see whether X or O won.
+# A3. Given a tic-tac-toe board (matrix of 3 x 3), write a method that can check to see whether X or O won.
 
 
 
