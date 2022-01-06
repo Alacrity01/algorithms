@@ -27,11 +27,14 @@ def greater_7(nums):
 # 5. Write a method that accepts an array of numbers as a parameter, and returns the number of how many 55’s there are in the array. For example, if the input is [55, 4, 7, 55, 9, 1, 55, 2, 3, 55, 0], the output should be 4. 
 def fifty_fives(nums):
 	return nums.count(55)
-	
-test_arr = [55, 4, 7, 55, 9, 1, 55, 2, 3, 55, 0]
-print(fifty_fives(test_arr))
+# test_arr = [55, 4, 7, 55, 9, 1, 55, 2, 3, 55, 0]
+# print(fifty_fives(test_arr))
 
 # 6. Write a method that accepts an array of numbers and returns the sum of the numbers. For example, if the input is [1, 5, 7, 9, 2, 0], the output should be 24. Don’t use any of the built in “sum” methods that Ruby comes with.
+def sum_of_arr(nums):
+	return sum(nums)
+# test_arr = [1, 5, 7, 9, 2, 0]
+# print(sum_of_arr(test_arr))
 
 # Medium:
 # 1. Write a method that accepts an array and returns it as a hash. For example, [“a”, “b”, “c] should turn into {0 => “a”, 1 => “b”, 2 => “c”}
