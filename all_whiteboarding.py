@@ -48,7 +48,14 @@ def arr_to_dict(arr):
 # test_arr = ["a", "b", "c"]	
 # print(arr_to_dict(test_arr))
 
-# M2. Write a method that accepts a string and returns whether it’s a palindrome. (without using the reverse method)
+# M2. Write a method that accepts a string and returns whether it’s a palindrome. 
+def is_palindrome(test_str):
+	if (list(reversed(test_str.casefold()))) == list(test_str.casefold()):
+		return ("'" + test_str + "' is a palindrome")
+	else:
+		return ("'" + test_str + "' is not a palindrome")
+# print(is_palindrome("Jeff"))
+# print(is_palindrome("Radar"))
 
 # Advanced:
 # A1. Write a method to generate/print/store the first "n" prime numbers.
