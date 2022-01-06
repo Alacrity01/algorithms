@@ -1,6 +1,9 @@
 #*************************** Whiteboarding Questions 1 ***************************
 # # Easy:
 # 1. Write a method that returns an array of every number from 1 to 100. 
+from typing import Counter
+
+
 def a100():
 	return list(range(1,101))
 # print(a100())
@@ -21,7 +24,12 @@ def greater_7(nums):
 # test_arr = [5, 8, 1, 7, 9, 10]
 # print(greater_7(test_arr))
 
-# 5. Write a method that accepts an array of numbers as a parameter, and returns the number of how many 55’s there are in the array. For example, if the input is [55, 4, 7, 55, 9, 1, 55, 2, 3, 55, 0], the output should be 4. NOTE: DO NOT USE RUBY’s built-in “count” method.
+# 5. Write a method that accepts an array of numbers as a parameter, and returns the number of how many 55’s there are in the array. For example, if the input is [55, 4, 7, 55, 9, 1, 55, 2, 3, 55, 0], the output should be 4. 
+def fifty_fives(nums):
+	return nums.count(55)
+	
+test_arr = [55, 4, 7, 55, 9, 1, 55, 2, 3, 55, 0]
+print(fifty_fives(test_arr))
 
 # 6. Write a method that accepts an array of numbers and returns the sum of the numbers. For example, if the input is [1, 5, 7, 9, 2, 0], the output should be 24. Don’t use any of the built in “sum” methods that Ruby comes with.
 
