@@ -18,11 +18,11 @@ def caesar(start_text, shift_amount, cipher_direction):
 
 complete = True
 while complete == True:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:  ")
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt\n")
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
     caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
     repeat = input(
-        "Do you want to rerun the Caesar Cipher? (Type 'yes' to rerun)/n").lower()
+        "Do you want to rerun the Caesar Cipher? (Type 'yes' to rerun)\n").lower()
     if repeat != "yes":
         complete = False
