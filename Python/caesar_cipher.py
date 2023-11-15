@@ -1,48 +1,23 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
 
-def encrypt(plain_text, shift):
-    cipher_text = ""
-    for letter in plain_text:
+
+def caesar(start_text, shift_amount, cipher_direction):
+    end_text = ""
+    if cipher_direction == "decode":
+        shift_amount *= -1
+    for letter in start_text:
         if letter in alphabet:
-            new_index = (alphabet.index(letter) + shift) % len(alphabet)
-            new_letter = alphabet[new_index]
-            cipher_text += new_letter
+            position = alphabet.index(letter)
+            new_position = (position + shift_amount) % 26
+            end_text += alphabet[new_position]
         else:
-            cipher_text += letter
-    print(f"The encoded text is {cipher_text}")
-    return cipher_text
+            end_text += letter
+    print(f"The {cipher_direction}d text is {end_text}")
 
 
-def decrypt(cipher_text, shift):
-    plain_text = ""
-    for letter in cipher_text:
-        if letter in alphabet:
-            new_index = alphabet.index(letter) - shift
-            new_letter = alphabet[new_index]
-            plain_text += new_letter
-        else:
-            plain_text += letter
-
-    print(f"The decoded text is {plain_text}")
-    return plain_text
-
-
-complete = False
-while not complete:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
-
-    if direction == "encode" or direction == "decode":
-        complete = True
-        if direction == "encode":
-            cipher_text = encrypt(text, shift)
-            # print(
-            #     f"\tTesting decrypt function on {cipher_text} with shift = {shift} ...")
-            plain_text = decrypt(cipher_text, shift)
-        else:  # direction == "decode"
-            plain_text = decrypt(text, shift)
-    else:  # invalid choice for direction
-        print("Please retry using either 'encode' or 'decode'.")
+caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
